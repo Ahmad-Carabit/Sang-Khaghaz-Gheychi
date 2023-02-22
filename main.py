@@ -4,19 +4,19 @@ import random
 point = 0
 system_point = 0
 
-entekhab = ["sang","kaghaz","gheychi"]
+choices = ["sang","kaghaz","gheychi"]
 
 while True:
     print("point : " +str(point))
     print("system_point : " +str(system_point))
     user_entekhab = input("beyn sang | kaghaz | gheychi | yeki ro entekhab kon  =>  ").lower()
 
-    if user_entekhab not in entekhab:
+    if user_entekhab not in choices:
         print("vorodi na dorost ast")
         continue
 
     random_system = random.randint(0,2)
-    computer_entekhab = entekhab[random_system]
+    computer_entekhab = choices[random_system]
     print(f"entekhabe Computer ==> {computer_entekhab}")
 
     if user_entekhab == computer_entekhab:
